@@ -71,13 +71,13 @@ void ConfigParams::read()
 
 void ConfigParams::reset()
 {
-    _defaultFixInterval = 15;
+    _defaultFixInterval = 5;
     _alternativeFixInterval = 0;
     _alternativeFixFromHours = 0;
     _alternativeFixFromMinutes = 0;
     _alternativeFixToHours = 0;
     _alternativeFixToMinutes = 0;
-    _gpsFixTimeout = 120;
+    _gpsFixTimeout = 20;
 
     memset(_devAddrOrEUI, 0x30, sizeof(_devAddrOrEUI) - 1);
     _devAddrOrEUI[sizeof(_devAddrOrEUI) - 1] = '\0';
@@ -101,17 +101,17 @@ void ConfigParams::reset()
     _apnPassword[sizeof(_apnPassword) - 1] = '\0';
 
     _band = 0;
-    _rxTimeout = 15;
+    _rxTimeout = 5;
 
     memcpy(_targetIP, "0.0.0.0", sizeof("0.0.0.0"));
     _targetIP[sizeof(_targetIP) - 1] = '\0';
 
     _cid = 1;
-    _mnoProfile = 1;
+    _mnoProfile = 100;
 
     _targetPort = 0;
 
-    _networkType = 0;
+    _networkType = 5;
 
     _coordinateUploadCount = 1;
     _repeatCount = 0;
@@ -129,7 +129,7 @@ void ConfigParams::reset()
     _gpsMinSatelliteCount = 4;
 
     _isLedEnabled = 0;
-    _isDebugOn = 0;
+    _isDebugOn = 1;
 
     _shouldRetryConnectionOnSend = true;
 

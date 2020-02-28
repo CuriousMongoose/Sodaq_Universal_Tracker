@@ -48,6 +48,10 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "CayenneLPP.h"
 #include "Network.h"
 
+#include "arduino_secrets.h"
+/*Add arduino_secrets.h file, containing #define SECRET_ATT_UDP_HEADER "<DeviceID>\n<DeviceToken>\n"
+Replace <DeviceID> and <DeviceToken> with your authentication credentials from AllThingsTalk*/
+
 //#define DEBUG
 
 #define PROJECT_NAME "SODAQ - Universal Tracker"
@@ -112,15 +116,15 @@ Time time;
 Sodaq_LSM303AGR accelerometer;
 Network network;
 
-#define DEFAULT_APN "nb.inetd.gdsp"
-#define DEFAULT_FORCE_OPERATOR "20404"
+#define DEFAULT_APN "hologram"
+#define DEFAULT_FORCE_OPERATOR "0"
 #define DEFAULT_BAND 20
 
 #define DEFAULT_APN_USER ""
 #define DEFAULT_APN_PASSWORD ""
 
-#define DEFAULT_TARGET_IP "0.0.0.0"
-#define DEFAULT_TARGET_PORT 1
+#define DEFAULT_TARGET_IP "40.68.172.187"
+#define DEFAULT_TARGET_PORT 8891
 
 #ifdef ARDUINO_SODAQ_SARA
     #define DEFAULT_NETWORK_TYPE Network::NETWORK_TYPE_NOTYPE
@@ -132,10 +136,12 @@ Network network;
     #define MODEM_STREAM Serial1
     #define MODEM_STREAM_RX (PIN_SERIAL1_RX)
     #define MODEM_STREAM_TX (PIN_SERIAL1_TX)
-    #define DEFAULT_NETWORK_TYPE Network::NETWORK_TYPE_NOTYPE;
+    #define DEFAULT_NETWORK_TYPE Network::NETWORK_TYPE_2G_R4;
 #else
     #error "No network type defined"
 #endif
+
+#define SECRET_ATT_UDP_HEADER
 
 static UdpHeader defaultUdpHeader;
 
@@ -391,10 +397,10 @@ void transmit()
 #if defined(ARDUINO_SODAQ_ONE)
         uint8_t sendBuffer[maxPayloadSize];
 #elif defined(ARDUINO_SODAQ_SFF) || defined (ARDUINO_SODAQ_SARA)
-        const size_t headerSize = sizeof(defaultUdpHeader.Raw);
+        const size_t headerSize = sizeof(SECRET_ATT_UDP_HEADER);
         uint8_t sendBuffer[headerSize + maxPayloadSize];
 
-        memcpy(&sendBuffer[sendBufferSize], defaultUdpHeader.Raw, headerSize);
+        memcpy(&sendBuffer[sendBufferSize], SECRET_ATT_UDP_HEADER, headerSize);
         sendBufferSize += headerSize;
 #endif
 
