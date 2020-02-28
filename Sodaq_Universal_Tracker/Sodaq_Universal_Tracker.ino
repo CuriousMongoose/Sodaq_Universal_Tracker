@@ -123,7 +123,7 @@ Network network;
 #define DEFAULT_APN_USER ""
 #define DEFAULT_APN_PASSWORD ""
 
-#define DEFAULT_TARGET_IP "40.68.172.187"
+#define DEFAULT_TARGET_IP "54.171.220.225"
 #define DEFAULT_TARGET_PORT 8891
 
 #ifdef ARDUINO_SODAQ_SARA
@@ -140,8 +140,6 @@ Network network;
 #else
     #error "No network type defined"
 #endif
-
-#define SECRET_ATT_UDP_HEADER
 
 static UdpHeader defaultUdpHeader;
 
