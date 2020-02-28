@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\sdcon\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.5\\**",
+                "C:\\Users\\sdcon\\AppData\\Local\\Arduino15\\packages\\SODAQ\\hardware\\samd\\1.8.1\\**",
+                "C:\\Users\\sdcon\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
+                "${workspaceFolder}/**",
+                "C:/Program Files (x86)/Arduion/hardware/arduino/avr/cores/arduino/",
+                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/src",
+                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/HID/src",
+                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src",
+                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src",
+                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src",
+                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "forcedInclude": [
+                "C:\\Users\\sdcon\\AppData\\Local\\Arduino15\\packages\\SODAQ\\hardware\\samd\\1.8.1\\cores\\arduino\\Arduino.h"
+            ]
+        }
+    ],
+    "version": 4
+}
