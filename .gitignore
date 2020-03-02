@@ -24,3 +24,4 @@ Debug/
 # Other temp files
 *.bak
 Sodaq_Universal_Tracker/arduino_secrets.h
+Sodaq_Universal_Tracker/.vscode/arduino.json

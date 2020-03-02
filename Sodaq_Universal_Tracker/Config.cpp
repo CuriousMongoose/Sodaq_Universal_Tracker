@@ -71,13 +71,13 @@ void ConfigParams::read()
 
 void ConfigParams::reset()
 {
-    _defaultFixInterval = 5;
+    _defaultFixInterval = 30;
     _alternativeFixInterval = 0;
     _alternativeFixFromHours = 0;
     _alternativeFixFromMinutes = 0;
     _alternativeFixToHours = 0;
     _alternativeFixToMinutes = 0;
-    _gpsFixTimeout = 20;
+    _gpsFixTimeout = 30;
 
     memset(_devAddrOrEUI, 0x30, sizeof(_devAddrOrEUI) - 1);
     _devAddrOrEUI[sizeof(_devAddrOrEUI) - 1] = '\0';
@@ -116,9 +116,9 @@ void ConfigParams::reset()
     _coordinateUploadCount = 1;
     _repeatCount = 0;
 
-    _accelerationPercentage = 0;
-    _accelerationDuration = 0;
-    _onTheMoveFixInterval = 1;
+    _accelerationPercentage = 30;
+    _accelerationDuration = 1;
+    _onTheMoveFixInterval = 3;
     _onTheMoveTimeout = 10;
 
     _loraPort = 1;
