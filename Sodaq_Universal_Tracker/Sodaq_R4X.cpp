@@ -226,7 +226,7 @@ bool Sodaq_R4X::connect(const char* apn, const char* uratSelect, uint8_t mnoProf
         return false;
     }
 
-    if (uratSelect != 5) {
+    if (uratSelect != SODAQ_R4X_2G_URAT) {
         if (!checkBandMasks(bandMaskLTE, bandMaskNB)) {
             return false;
         }
