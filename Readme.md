@@ -12,7 +12,7 @@ You should install (or update to) version 1.6.19 or higher.
 This derived firmware uses a default att token has been replaced with a arduino_secrets.h file. This file must be created before compiling.
 It must contain the following:
 
-```#define SECRET_ATT_UDP_HEADER "<DeviceID>\n<DeviceToken>\n"
+```#define SECRET_ATT_UDP_HEADER "<DeviceID>\n<DeviceToken>\n"```
 
 Replace <DeviceID> and <DeviceToken> with your authentication credentials from AllThingsTalk, or create you own device ID and 256-bit token if you're using a custom UDP gateway. You can use https://randomkeygen.com/ to create a random 256-bit key.
 
