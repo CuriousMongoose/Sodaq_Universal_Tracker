@@ -123,7 +123,7 @@ Network network;
 #define DEFAULT_APN_USER ""
 #define DEFAULT_APN_PASSWORD ""
 
-#define DEFAULT_TARGET_IP "3.248.81.89"
+#define DEFAULT_TARGET_IP "0.0.0.0"
 #define DEFAULT_TARGET_PORT 8891
 
 #ifdef ARDUINO_SODAQ_SARA
