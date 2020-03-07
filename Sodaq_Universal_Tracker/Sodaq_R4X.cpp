@@ -226,9 +226,12 @@ bool Sodaq_R4X::connect(const char* apn, const char* uratSelect, uint8_t mnoProf
         return false;
     }
 
-    // if (!checkBandMasks(bandMaskLTE, bandMaskNB)) {
-    //     return false;
-    // }
+    if (uratSelect != 5) {
+        if (!checkBandMasks(bandMaskLTE, bandMaskNB)) {
+            return false;
+        }
+    }
+    
 
     if (!checkCOPS(operatorSelect != 0 ? operatorSelect : AUTOMATIC_OPERATOR, uratSelect != 0 ? uratSelect : DEFAULT_URAT)) {
         return false;
