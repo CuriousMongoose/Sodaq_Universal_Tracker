@@ -8,7 +8,7 @@ http://downloads.sodaq.net/package_sodaq_samd_index.json
 
 You should install (or update to) version 1.6.19 or higher.
 
-**arduino_secrets.h**
+## arduino_secrets.h
 This derived firmware uses a default att token has been replaced with a arduino_secrets.h file. This file must be created before compiling.
 It must contain the following:
 
