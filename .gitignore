@@ -20,8 +20,9 @@ __vm
 *.vcx*
 Release/
 Debug/
+*.code-workspace
+.vscode/
 
 # Other temp files
 *.bak
-Sodaq_Universal_Tracker/arduino_secrets.h
-Sodaq_Universal_Tracker/.vscode/arduino.json
+arduino_secrets.h

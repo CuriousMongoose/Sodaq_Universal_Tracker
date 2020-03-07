@@ -1,5 +1,0 @@
-{
-    "board": "SODAQ:samd:sodaq_sff",
-    "port": "COM9",
-    "sketch": "Sodaq_Universal_Tracker.ino"
-}
