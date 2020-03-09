@@ -57,11 +57,10 @@ On-the-move Functionality
 
 Cellular
   Network Type (N2xx NB-IoT = 2, R4xx NB-IoT = 3, R4xx LTE-M = 4, R412 2G = 5, 2G/3G = 6)  (ntype=): 0
-  All Things Talk Token      (att=):
-  APN                        (apn=): nb.inetd.gdsp
-  Force Operator             (opr=): 20404
+  APN                        (apn=): hologram
+  Force Operator             (opr=): 0
   CID                        (cid=): 1
-  MNO Profile                (mno=): 1
+  MNO Profile                (mno=): 100
   APN user                   (apnu=):
   APN password               (apnp=):
   NB-IoT Band                (bnd=): 20
